@@ -34,7 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         user.address = address
         
-        getAlbums()
+        dataTask(path: albumPath, method: getMethod) { (success, json) in
+            
+            print(json)
+        }
     
         return true
     }
