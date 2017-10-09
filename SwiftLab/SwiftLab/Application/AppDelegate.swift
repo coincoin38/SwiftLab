@@ -17,6 +17,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        
+        let managedObjectContext = persistentContainer.viewContext
+        
+        let user = User(context:managedObjectContext)
+            
+        let address = Address(context:managedObjectContext)
+        
+        user.email = "toto@gmail.com"
+        user.id = 1
+        user.name = "toto"
+        user.username = "totoDu69"
+        
+        address.city = "Lyon"
+        
+        user.address = address
+        
+        getAlbums()
+    
         return true
     }
 

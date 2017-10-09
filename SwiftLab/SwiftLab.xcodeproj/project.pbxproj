@@ -14,6 +14,7 @@
 		1364BD881F8B88DC00CFDF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1364BD871F8B88DC00CFDF0D /* Assets.xcassets */; };
 		1364BD8B1F8B88DC00CFDF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1364BD891F8B88DC00CFDF0D /* LaunchScreen.storyboard */; };
 		1364BD961F8B88DC00CFDF0D /* SwiftLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1364BD951F8B88DC00CFDF0D /* SwiftLabTests.swift */; };
+		13E0A00D1F8B9A3200339FF3 /* JsonPlaceHolderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E0A00C1F8B9A3200339FF3 /* JsonPlaceHolderManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		1364BD911F8B88DC00CFDF0D /* SwiftLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1364BD951F8B88DC00CFDF0D /* SwiftLabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLabTests.swift; sourceTree = "<group>"; };
 		1364BD971F8B88DC00CFDF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13E0A00C1F8B9A3200339FF3 /* JsonPlaceHolderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonPlaceHolderManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		135238A61F8B8B5D006C1B4B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		135238A71F8B8B70006C1B4B /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				1364BD841F8B88DC00CFDF0D /* SwiftLab.xcdatamodeld */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		1364BD711F8B88DB00CFDF0D = {
 			isa = PBXGroup;
 			children = (
@@ -79,13 +96,13 @@
 		1364BD7C1F8B88DC00CFDF0D /* SwiftLab */ = {
 			isa = PBXGroup;
 			children = (
-				1364BD7D1F8B88DC00CFDF0D /* AppDelegate.swift */,
-				1364BD7F1F8B88DC00CFDF0D /* ViewController.swift */,
-				1364BD811F8B88DC00CFDF0D /* Main.storyboard */,
-				1364BD871F8B88DC00CFDF0D /* Assets.xcassets */,
-				1364BD891F8B88DC00CFDF0D /* LaunchScreen.storyboard */,
+				13E0A00B1F8B9A0200339FF3 /* Managers */,
+				1364BDA01F8B8A8A00CFDF0D /* Application */,
+				1364BDA11F8B8A9700CFDF0D /* Models */,
+				1364BDA21F8B8A9D00CFDF0D /* ViewControllers */,
+				1364BDA31F8B8AC300CFDF0D /* Views */,
+				1364BDA41F8B8B0500CFDF0D /* Supporting Files */,
 				1364BD8C1F8B88DC00CFDF0D /* Info.plist */,
-				1364BD841F8B88DC00CFDF0D /* SwiftLab.xcdatamodeld */,
 			);
 			path = SwiftLab;
 			sourceTree = "<group>";
@@ -97,6 +114,56 @@
 				1364BD971F8B88DC00CFDF0D /* Info.plist */,
 			);
 			path = SwiftLabTests;
+			sourceTree = "<group>";
+		};
+		1364BDA01F8B8A8A00CFDF0D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1364BD7D1F8B88DC00CFDF0D /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1364BDA11F8B8A9700CFDF0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				135238A71F8B8B70006C1B4B /* DataModel */,
+				135238A61F8B8B5D006C1B4B /* Entities */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1364BDA21F8B8A9D00CFDF0D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1364BD7F1F8B88DC00CFDF0D /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1364BDA31F8B8AC300CFDF0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1364BD811F8B88DC00CFDF0D /* Main.storyboard */,
+				1364BD891F8B88DC00CFDF0D /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1364BDA41F8B8B0500CFDF0D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1364BD871F8B88DC00CFDF0D /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13E0A00B1F8B9A0200339FF3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				13E0A00C1F8B9A3200339FF3 /* JsonPlaceHolderManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E0A00D1F8B9A3200339FF3 /* JsonPlaceHolderManager.swift in Sources */,
 				1364BD801F8B88DC00CFDF0D /* ViewController.swift in Sources */,
 				1364BD861F8B88DC00CFDF0D /* SwiftLab.xcdatamodeld in Sources */,
 				1364BD7E1F8B88DC00CFDF0D /* AppDelegate.swift in Sources */,
