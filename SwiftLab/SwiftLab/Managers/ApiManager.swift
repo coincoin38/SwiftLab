@@ -38,13 +38,20 @@ private func dataTask(path : String, method : String, completion: @escaping (Boo
         
         if httpResponseHandler(statusCode: statusCode!)
         {
-            if let data = data
+            do
             {
-                let json = try? JSONSerialization.jsonObject(with: data, options: [])
+                let json = try JSONSerialization.jsonObject(with: data!, options: [])
+            
+                SLPrint(title: "Response",content: json)
                 
-                SLPrint(title: "Response",content: json!)
+                if let jsonArray = json as? [[String: Any]]
+                {
+                    completion(true, jsonArray)
+                }
+            }
+            catch
+            {
                 
-                completion(true, json as Any)
             }
         }
         else
